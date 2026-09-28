@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f7f8;
+  --card-bg: #ffffff;
+  --border: #e2e2e6;
+  --text: #1a1a1e;
+  --muted: #6b6b73;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --error-bg: #fdecea;
+  --error-text: #b3261e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.analyze-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.analyze-form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.analyze-form-row input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.analyze-form-row button {
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.analyze-form-row button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.analyze-form-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: var(--error-bg);
+  color: var(--error-text);
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  margin-top: 0.75rem;
+}
+
+.result-card,
+.history {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.result-card dt {
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.result-card dd {
+  margin: 0.15rem 0 0;
+}
+
+.heading-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-list li:last-child {
+  border-bottom: none;
+}
+
+.history-url {
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.history-title {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.history-date {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
